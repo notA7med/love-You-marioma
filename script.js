@@ -13,7 +13,7 @@ let player = {
     targetX: 100,
     targetY: 300
 };
-player.img.src = "girl.png";
+player.img.src = "images/girl.png";
 
 let boy = {
     x: 800,
@@ -24,7 +24,7 @@ let boy = {
     targetY: 270,
     img: new Image()
 };
-boy.img.src = "boy.png";
+boy.img.src = "images/boy.png";
 
 let ground = 350;
 let gravity = 0.8; // Reduced gravity for easier jumping
@@ -38,22 +38,22 @@ let isEnding = false;
 
 // Load assets
 let background = new Image();
-background.src = "background.png";
+background.src = "images/background.png";
 
 let flowerImg = new Image();
-flowerImg.src = "flower.png";
+flowerImg.src = "images/flower.png";
 
-let obstacleImgs = ["fire.png", "hole.png", "box.png"].map(src => {
+let obstacleImgs = ["images/fire.png", "images/hole.png", "images/box.png"].map(src => {
     let img = new Image();
     img.src = src;
     return img;
 });
 
 // Audio
-let jumpSound = new Audio("jump.mp3");
-let hitSound = new Audio("hit.mp3");
-let bgMusic = new Audio("bg.mp3");
-let loveMusic = new Audio("love.mp3");
+let jumpSound = new Audio("sounds/jump.mp3");
+let hitSound = new Audio("sounds/hit.mp3");
+let bgMusic = new Audio("sounds/bg.mp3");
+let loveMusic = new Audio("sounds/love.mp3");
 
 bgMusic.loop = true;
 bgMusic.play();
